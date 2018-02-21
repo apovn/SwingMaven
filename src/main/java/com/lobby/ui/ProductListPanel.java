@@ -5,6 +5,9 @@
  */
 package com.lobby.ui;
 
+import com.lobby.component.AvatarPanel;
+import javax.swing.JFrame;
+
 /**
  *
  * @author QuocBao
@@ -16,6 +19,7 @@ public class ProductListPanel extends javax.swing.JPanel {
      */
     public ProductListPanel() {
         initComponents();
+        initUI();
     }
 
     /**
@@ -27,26 +31,133 @@ public class ProductListPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        searchProductBtn = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
+        productPanelDefault = new javax.swing.JPanel();
+        bgLbl = new javax.swing.JLabel();
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome-1.jpg"))); // NOI18N
+        setMaximumSize(new java.awt.Dimension(1024, 768));
+        setMinimumSize(new java.awt.Dimension(1024, 768));
+        setPreferredSize(new java.awt.Dimension(1024, 768));
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(129, 129));
+        jPanel1.setMinimumSize(new java.awt.Dimension(129, 129));
+        jPanel1.setPreferredSize(new java.awt.Dimension(129, 129));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jTextField1.setText("search here");
+
+        searchProductBtn.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        searchProductBtn.setText("Search");
+        searchProductBtn.setMaximumSize(new java.awt.Dimension(71, 20));
+        searchProductBtn.setMinimumSize(new java.awt.Dimension(71, 20));
+        searchProductBtn.setPreferredSize(new java.awt.Dimension(71, 20));
+        searchProductBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchProductBtnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 793, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(searchProductBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(searchProductBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel3.setMaximumSize(new java.awt.Dimension(1024, 636));
+        jPanel3.setMinimumSize(new java.awt.Dimension(1024, 636));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1024, 636));
+        jPanel3.setLayout(new java.awt.CardLayout());
+
+        productPanelDefault.setMaximumSize(new java.awt.Dimension(1024, 636));
+        productPanelDefault.setMinimumSize(new java.awt.Dimension(1024, 636));
+        productPanelDefault.setPreferredSize(new java.awt.Dimension(1024, 636));
+
+        bgLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/welcome-1.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout productPanelDefaultLayout = new javax.swing.GroupLayout(productPanelDefault);
+        productPanelDefault.setLayout(productPanelDefaultLayout);
+        productPanelDefaultLayout.setHorizontalGroup(
+            productPanelDefaultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productPanelDefaultLayout.createSequentialGroup()
+                .addComponent(bgLbl)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        productPanelDefaultLayout.setVerticalGroup(
+            productPanelDefaultLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productPanelDefaultLayout.createSequentialGroup()
+                .addComponent(bgLbl)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(productPanelDefault, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 123, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 645, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void searchProductBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchProductBtnActionPerformed
+        // get text and search to display product grid item
+        jPanel3.remove(productPanelDefault);
+        ProductGridItem pgi = new ProductGridItem();
+        pgi.loadProductItem("jean");
+        jPanel3.add(pgi);
+        jPanel3.revalidate();
+        
+    }//GEN-LAST:event_searchProductBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel bgLbl;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPanel productPanelDefault;
+    private javax.swing.JButton searchProductBtn;
     // End of variables declaration//GEN-END:variables
+
+    public static JFrame mainapp;
+    
+    private void initUI() {
+        AvatarPanel p = new AvatarPanel();
+        p.initAvatar("/images/avatar.jpg");
+        jPanel1.add(p);
+        jPanel1.revalidate();
+    }
 }

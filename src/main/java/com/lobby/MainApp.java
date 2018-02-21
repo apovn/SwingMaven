@@ -82,6 +82,7 @@ public class MainApp extends javax.swing.JFrame {
             isAuthenticated = true;
             this.remove(jPanel1);
             ProductListPanel pl = new ProductListPanel();
+            pl.mainapp = this;
             this.add(pl);
             this.revalidate();
         } else {

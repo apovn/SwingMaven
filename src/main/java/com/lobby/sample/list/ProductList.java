@@ -247,18 +247,18 @@ public class ProductList extends javax.swing.JFrame {
         }
     }
     
-    public class MarioListRenderer extends DefaultListCellRenderer {
-
-        @Override
-        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-//            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-//            label.setIcon(imageMap.get((String) value));
-//            label.setHorizontalTextPosition(JLabel.BOTTOM);
-//            return label;
-            ProductItem pi = new ProductItem();
-            return pi;
-        }
-    }
+//    public class MarioListRenderer extends DefaultListCellRenderer {
+//
+//        @Override
+//        public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+////            JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+////            label.setIcon(imageMap.get((String) value));
+////            label.setHorizontalTextPosition(JLabel.BOTTOM);
+////            return label;
+//            ProductItem pi = new ProductItem();
+//            return pi;
+//        }
+//    }
 
     private Map<String, ImageIcon> createImageMap() {
         Map<String, ImageIcon> map = new HashMap<>();

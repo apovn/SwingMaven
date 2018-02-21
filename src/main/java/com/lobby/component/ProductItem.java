@@ -5,6 +5,14 @@
  */
 package com.lobby.component;
 
+import com.lobby.MainApp;
+import com.lobby.ui.ProductDetailPanel;
+import com.lobby.ui.ProductListPanel;
+import java.awt.CardLayout;
+import java.awt.Container;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
 /**
  *
  * @author tri.tran
@@ -27,61 +35,145 @@ public class ProductItem extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        pImageLbl = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        pNameLbl = new javax.swing.JLabel();
+        pPriceLbl = new javax.swing.JLabel();
+        pDesLbl = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(200, 367));
-        setPreferredSize(new java.awt.Dimension(200, 367));
+        setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 153, 153)));
+        setMaximumSize(new java.awt.Dimension(160, 285));
+        setMinimumSize(new java.awt.Dimension(160, 285));
+        setPreferredSize(new java.awt.Dimension(160, 285));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/jean.jpg"))); // NOI18N
+        jPanel1.setMaximumSize(new java.awt.Dimension(160, 219));
+        jPanel1.setMinimumSize(new java.awt.Dimension(160, 219));
+        jPanel1.setPreferredSize(new java.awt.Dimension(160, 219));
 
-        jLabel2.setText("Product name");
+        pImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/jean-resize.jpg"))); // NOI18N
+        pImageLbl.setMaximumSize(new java.awt.Dimension(160, 219));
+        pImageLbl.setMinimumSize(new java.awt.Dimension(160, 219));
+        pImageLbl.setName(""); // NOI18N
+        pImageLbl.setPreferredSize(new java.awt.Dimension(160, 219));
+        pImageLbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pImageLblMouseClicked(evt);
+            }
+        });
 
-        jLabel3.setText("123$");
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(pImageLbl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pImageLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
-        jLabel4.setText("Some text Some text Some text ");
+        pNameLbl.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        pNameLbl.setText("Product name");
+
+        pPriceLbl.setText("123$");
+
+        pDesLbl.setText("some text some text some text some text some text some text some text ");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(pNameLbl)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pPriceLbl))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(pDesLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pNameLbl)
+                    .addComponent(pPriceLbl))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pDesLbl)
+                .addContainerGap(24, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void pImageLblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pImageLblMouseClicked
+        JLabel lbl = (JLabel) evt.getComponent();
+        String productId = lbl.getText();
+        System.out.println("productId: " + productId);
+
+        ProductDetailPanel pdp = new ProductDetailPanel();
+        JFrame rootFrame = ProductListPanel.mainapp;
+        rootFrame.getContentPane().removeAll();
+        rootFrame.add(pdp);
+        rootFrame.revalidate();
+    }//GEN-LAST:event_pImageLblMouseClicked
+
+    public JLabel getpDesLbl() {
+        return pDesLbl;
+    }
+
+    public void setpDesLbl(JLabel pDesLbl) {
+        this.pDesLbl = pDesLbl;
+    }
+
+    public JLabel getpImageLbl() {
+        return pImageLbl;
+    }
+
+    public void setpImageLbl(JLabel pImageLbl) {
+        this.pImageLbl = pImageLbl;
+    }
+
+    public JLabel getpNameLbl() {
+        return pNameLbl;
+    }
+
+    public void setpNameLbl(JLabel pNameLbl) {
+        this.pNameLbl = pNameLbl;
+    }
+
+    public JLabel getpPriceLbl() {
+        return pPriceLbl;
+    }
+
+    public void setpPriceLbl(JLabel pPriceLbl) {
+        this.pPriceLbl = pPriceLbl;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel pDesLbl;
+    private javax.swing.JLabel pImageLbl;
+    private javax.swing.JLabel pNameLbl;
+    private javax.swing.JLabel pPriceLbl;
     // End of variables declaration//GEN-END:variables
 }
