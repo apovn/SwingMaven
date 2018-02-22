@@ -149,7 +149,7 @@ public class ProductGridItem extends javax.swing.JPanel {
         URL url;
         try {
 
-            DefaultListModel listModel = new DefaultListModel();
+//            DefaultListModel listModel = new DefaultListModel();
 //            int count = 0;
             for (int i = 0; i < 12; i++) {
                 

@@ -52,6 +52,7 @@ public class ProductItem extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(160, 219));
 
         pImageLbl.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/jean-resize.jpg"))); // NOI18N
+        pImageLbl.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         pImageLbl.setMaximumSize(new java.awt.Dimension(160, 219));
         pImageLbl.setMinimumSize(new java.awt.Dimension(160, 219));
         pImageLbl.setName(""); // NOI18N

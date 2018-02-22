@@ -6,6 +6,7 @@
 package com.lobby.ui;
 
 import com.lobby.component.AvatarPanel;
+import com.lobby.component.ProductCartRow;
 
 /**
  *
@@ -35,6 +36,10 @@ public class ProductDetailPanel extends javax.swing.JPanel {
         jTextField1 = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jPanel7 = new javax.swing.JPanel();
 
         setMaximumSize(new java.awt.Dimension(1024, 768));
         setMinimumSize(new java.awt.Dimension(1024, 768));
@@ -80,16 +85,63 @@ public class ProductDetailPanel extends javax.swing.JPanel {
         );
 
         jPanel4.setBackground(new java.awt.Color(0, 102, 153));
+        jPanel4.setMaximumSize(new java.awt.Dimension(369, 771));
+        jPanel4.setMinimumSize(new java.awt.Dimension(369, 771));
+        jPanel4.setName(""); // NOI18N
+
+        jPanel5.setMaximumSize(new java.awt.Dimension(349, 117));
+        jPanel5.setMinimumSize(new java.awt.Dimension(349, 117));
+        jPanel5.setPreferredSize(new java.awt.Dimension(349, 117));
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 117, Short.MAX_VALUE)
+        );
+
+        jPanel6.setMaximumSize(new java.awt.Dimension(349, 407));
+        jPanel6.setMinimumSize(new java.awt.Dimension(349, 407));
+
+        jPanel7.setMaximumSize(new java.awt.Dimension(347, 405));
+        jPanel7.setMinimumSize(new java.awt.Dimension(347, 405));
+        jPanel7.setLayout(new java.awt.GridLayout(5, 1));
+        jScrollPane1.setViewportView(jPanel7);
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 419, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 369, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -125,6 +177,10 @@ public class ProductDetailPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
@@ -133,5 +189,16 @@ public class ProductDetailPanel extends javax.swing.JPanel {
         p.initAvatar("/images/avatar.jpg");
         jPanel1.add(p);
         jPanel1.revalidate();
+
+        ProductCartRow row = new ProductCartRow();
+        row.getProductNameLbl().setText("name 0");
+        jPanel7.add(row);
+
+        ProductCartRow row1 = new ProductCartRow();
+        row1.getProductNameLbl().setText("name 1");
+        jPanel7.add(row1);
+
+        jPanel7.revalidate();
+        this.revalidate();
     }
 }
